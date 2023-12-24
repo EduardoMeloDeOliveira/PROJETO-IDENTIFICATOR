@@ -2,17 +2,18 @@
 var $btnVerificar = document.getElementsByTagName('button')[0]
 var h2Resultante = document.getElementById('resultadoFinal')
 var $content = document.getElementsByClassName('content')[0]
-var $imgResultante = document.getElementById('imgResultante')
+var $imgResultante = document.getElementById('results')
 var $entrada = document.getElementsByClassName('entradas')[0]
 var $seletor = document.getElementsByClassName('seletor')[0]
 var $resultado = document.getElementsByClassName('resultado')[0]
+var $btnVoltar = document.getElementsByTagName('button')[1]
 
 
 
 
 // CRIANDO OS EVENTOS 
 $btnVerificar.addEventListener('click', verificar)
-
+$btnVoltar.addEventListener('click', voltar)
 
 
 function verificar() {
@@ -34,9 +35,8 @@ function verificar() {
 
 
     $content.classList.add('hide')
-    $resultado.classList.remove('hide')
     $content.classList.add('hide')
-
+    $resultado.classList.remove('hide')
 
 
     // CRIAÇÃO DE CONDIÇÕES
@@ -55,9 +55,11 @@ function verificar() {
                 $imgResultante.innerHTML = ` <img src="assets/kid.png" alt="">`
 
 
+
             } else if (resultante > 10 && resultante <= 18) {
                 h2Resultante.innerHTML = `Olá ${nomeUser},tá ficando velhaco, sua idade é de ${resultante} anos`
                 $imgResultante.innerHTML = ` <img src="assets/jovem.jpg" alt="">`
+
 
 
             } else if (resultante > 18 && resultante <= 45) {
@@ -76,6 +78,24 @@ function verificar() {
     } else if (dataNascimento > ano) {
         alert('Insira um ano de nascimento válido')
     }
+
+
+
+
+
+
+}
+
+
+
+function voltar() {
+
+    $content.classList.remove('hide')
+    $content.classList.remove('hide')
+    $resultado.classList.add('hide')
+
+    document.getElementById('nome_ipt').value = ""
+    document.getElementById('dataNascimento').value = ""
 
 
 
