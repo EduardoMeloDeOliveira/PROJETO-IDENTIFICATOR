@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDENTIFICATOR</title>
     <link rel="stylesheet" href="tempo.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 
 </head>
 
 <body>
     <div class="verificador">
-        <h1>IDENTIFICATOR</h1>
+        <h1 >IDENTIFICATOR</h1>
         <div class="content">
 
             <div class="entradas">
@@ -38,8 +38,9 @@
                 </select>
 
             </div>
-            
-            <div class="botao"><button>VERIFICAR</button>
+
+            <div class="botao">
+                <button>VERIFICAR</button>
 
             </div>
 
@@ -47,7 +48,18 @@
 
         </div>
 
+        <div class="resultado hide">
+                <p id="resultadoFinal"></p>
+                <img src="" alt="" id="imgResultante">
+           
+            <button>voltar</button>
+
+
+        </div>
+
     </div>
+
+
 
 </body>
 
