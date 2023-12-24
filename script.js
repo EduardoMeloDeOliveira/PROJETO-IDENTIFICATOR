@@ -14,6 +14,7 @@ var $btnVoltar = document.getElementsByTagName('button')[1]
 // CRIANDO OS EVENTOS 
 $btnVerificar.addEventListener('click', verificar)
 $btnVoltar.addEventListener('click', voltar)
+h2Resultante.style.fontWeight = "bold"
 
 
 function verificar() {
@@ -64,7 +65,7 @@ function verificar() {
 
             } else if (resultante > 18 && resultante <= 45) {
                 h2Resultante.innerHTML = `Olá ${nomeUser},já tá velhaco,sua idade é de ${resultante} anos`
-                $imgResultante.innerHTML = ` <img src="assets/adulto.jpeg" alt="">`
+                $imgResultante.innerHTML += ` <img src="assets/adulto.jpeg" alt="">`
             } else {
                 h2Resultante.innerHTML = `Olá ${nomeUser},tá com um pé na cova e outro no sabonete,sua idade é de ${resultante} anos`
                 $imgResultante.innerHTML = ` <img src="assets/velhote.jpg" alt="">`
