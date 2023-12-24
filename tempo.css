@@ -16,7 +16,7 @@ body {
 .verificador {
     background-color: white;
     width: 600px;
-    height: 500px;
+    height: 525px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +104,7 @@ input::placeholder {
     object-fit: cover;
     width: 300px;
     height: 300px;
-    border-radius: 100%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,6 +125,7 @@ input::placeholder {
     border-radius: 5px;
     margin-top: 30px;
     height: 40px;
+    transition: all 0.8s;
 }
 
 
@@ -140,3 +141,7 @@ input::placeholder {
     transform: scale(1.2);
 }
 
+
+.resultado button:hover{
+    transform: scale(1.2);
+}

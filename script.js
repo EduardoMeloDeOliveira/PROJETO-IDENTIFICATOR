@@ -7,6 +7,7 @@ var $entrada = document.getElementsByClassName('entradas')[0]
 var $seletor = document.getElementsByClassName('seletor')[0]
 var $resultado = document.getElementsByClassName('resultado')[0]
 var $btnVoltar = document.getElementsByTagName('button')[1]
+var $aparece = document.getElementsByClassName('aparece')[0]
 
 
 
@@ -15,6 +16,12 @@ var $btnVoltar = document.getElementsByTagName('button')[1]
 $btnVerificar.addEventListener('click', verificar)
 $btnVoltar.addEventListener('click', voltar)
 h2Resultante.style.fontWeight = "bold"
+$aparece.style.marginTop = "20px"
+h2Resultante.style.marginTop = '20px'
+document.getElementById('sexo_biologico').value = ""
+h2Resultante.style.textAlign = 'center'
+
+
 
 
 function verificar() {
@@ -40,6 +47,7 @@ function verificar() {
     $resultado.classList.remove('hide')
 
 
+
     // CRIAÇÃO DE CONDIÇÕES
 
     if (dataNascimento <= ano && dataNascimento != "") {
@@ -53,22 +61,22 @@ function verificar() {
 
             if (resultante >= 0 && resultante <= 10) {
                 h2Resultante.innerHTML = `Olá ${nomeUser},você ainda é uma criança o que esta fazendo aqui?, sua idade é de ${resultante} anos`
-                $imgResultante.innerHTML = ` <img src="assets/kid.png" alt="">`
+                $aparece.innerHTML = ` <img src="assets/kid.png" alt="">`
 
 
 
             } else if (resultante > 10 && resultante <= 18) {
                 h2Resultante.innerHTML = `Olá ${nomeUser},tá ficando velhaco, sua idade é de ${resultante} anos`
-                $imgResultante.innerHTML = ` <img src="assets/jovem.jpg" alt="">`
+                $aparece.innerHTML = ` <img src="assets/jovem.jpg" alt="">`
 
 
 
             } else if (resultante > 18 && resultante <= 45) {
                 h2Resultante.innerHTML = `Olá ${nomeUser},já tá velhaco,sua idade é de ${resultante} anos`
-                $imgResultante.innerHTML += ` <img src="assets/adulto.jpeg" alt="">`
+                $aparece.innerHTML = ` <img src="assets/adulto.jpeg" alt="">`
             } else {
                 h2Resultante.innerHTML = `Olá ${nomeUser},tá com um pé na cova e outro no sabonete,sua idade é de ${resultante} anos`
-                $imgResultante.innerHTML = ` <img src="assets/velhote.jpg" alt="">`
+                $aparece.innerHTML = ` <img src="assets/velhote.jpg" alt="">`
             }
 
 
@@ -95,9 +103,10 @@ function voltar() {
     $content.classList.remove('hide')
     $resultado.classList.add('hide')
 
-    document.getElementById('nome_ipt').value = ""
-    document.getElementById('dataNascimento').value = ""
-
+    document.getElementById('nome_ipt').value = "";
+    document.getElementById('sexo_biologico').value = "";
+    document.getElementById('ano_nascimento_ipt').value = "";
+    
 
 
 
